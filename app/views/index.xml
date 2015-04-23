@@ -1,0 +1,36 @@
+<Alloy>
+	<Window class="container">
+<ListView id="eventList" defaultItemTemplate="elementTemplate">
+				<HeaderView>
+                <View backgroundColor="#DDD" height="Ti.UI.SIZE">
+                    <Label>Calendar Events</Label>
+                </View>>
+            </HeaderView>
+            <ListSection id="listItemContainer">
+			</ListSection>
+    <Templates>
+        <ItemTemplate name="elementTemplate">
+            <Label bindId="symbol" id="symbol" />
+            <View id="properties">
+                <Label bindId="name" id="name" />
+                <View id="secondLine">
+                	<Label class="line2 fieldLabel" text="Number: " />
+                    <Label class="line2" bindId="number" id="number" />
+                	<Label class="line2 fieldLabel" text="Atomic Mass: " />
+                    <Label class="line2" bindId="mass" id="mass" />
+                    <Label class="line2 fieldLabel" text="Date: " />
+                    <Label class="line2" bindId="start_date" id="start_date" />
+                </View>
+            </View>
+			<ImageView bindId="image" id="image" />
+        </ItemTemplate>
+    </Templates>
+	<ListSection>
+		<ListItem name:text ="PARTY" start_time:text="04-23-15" details:text="All night long"/> 
+		<ListItem symbol:text="H" symbol:color="#090" name:text="Hydrogen" number:text="1" mass:text="1.00794"/>
+		<ListItem symbol:text="He" symbol:color="#090" name:text="Helium" number:text="2" mass:text="4.002602"/>
+    	<ListItem symbol:text="Li" name:text="Lithium" number:text="3" mass:text="6.941"/>
+	</ListSection>
+</ListView>	
+	</Window>
+</Alloy>
